@@ -1,0 +1,23 @@
+{
+  "name": "redux-saga-toolkit",
+  "version": "1.0.0",
+  "description": "Safe effect wrapper and testing utilites for redux-saga",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cutting-Edge-technologies/redux-saga-toolkit.git"
+  },
+  "keywords": [
+    "redux",
+    "redux-saga"
+  ],
+  "author": "Kirill Penkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cutting-Edge-technologies/redux-saga-toolkit/issues"
+  },
+  "homepage": "https://github.com/Cutting-Edge-technologies/redux-saga-toolkit#readme"
+}
