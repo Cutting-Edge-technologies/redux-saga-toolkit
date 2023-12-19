@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 import { Example } from './hoc';
-import { createTeacherHOCDecorator } from '../../../teacher/hoc/TeacherStateDecorator';
 import { createExampleHOCDecorator } from './store/storeCreator';
+import React from 'react';
 
 const { HocDecorator, useSetTestState: useSetExampleState } = createExampleHOCDecorator();
 
