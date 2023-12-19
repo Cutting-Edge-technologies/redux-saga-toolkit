@@ -1,4 +1,4 @@
-import { configureStore, createReducer, PayloadAction } from "@reduxjs/toolkit";
+import { configureStore, createAction, createReducer, PayloadAction } from "@reduxjs/toolkit";
 import { Action, Reducer, Store } from "redux";
 import { commonState } from "../state/commonReducer";
 import { StoreLogSagaMonitor, StoreSagaMonitor } from "./sagaMonitor";
@@ -80,13 +80,21 @@ export const makeStoreCreator = <State extends commonState>(reducer: Reducer<Sta
 
 export type StoreCreator<State> = () => ExtendedStore<State>;
 
+export const setState = createAction<Partial<commonState>>('setState');
+const resetState = createAction('resetState');
+
 export const makeHocTestingStore = <State extends commonState>(store: ExtendedStore<State>): ExtendedStore<State> => {
   const initialState = store.getState();
-  
-  const rootReducer = createReducer(initialState, {
-    setState: (state, { payload }: PayloadAction<Partial<State>>) => ({...state, ...payload}),
-    resetState: () => ({...initialState}),
-  })
+
+  const rootReducer = createReducer(initialState, (builder) => {
+    builder
+      .addCase(setState, (state, action: PayloadAction<Partial<State>>) => {
+        return {...state, ...action.payload};
+      })
+      .addCase(resetState, () => {
+        return {...initialState};
+      });
+  });
 
   const actionHistory: any[] = [];
   const sagaMonitor = new StoreLogSagaMonitor(actionHistory);
