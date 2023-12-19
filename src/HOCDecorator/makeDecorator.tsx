@@ -1,6 +1,7 @@
 import { StoryFn } from "@storybook/react";
 import { Provider } from "react-redux";
 import { ExtendedStore } from "../types";
+import React from 'react'
 
 export const makeDecorator = (store: ExtendedStore<any>) => {
   const HocDecorator = (Story: StoryFn<any>) => {
