@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/Cutting-Edge-technologies/redux-saga-toolkit/issues"
   },
-  "homepage": "https://github.com/Cutting-Edge-technologies/redux-saga-toolkit#readme"
+  "homepage": "https://github.com/Cutting-Edge-technologies/redux-saga-toolkit#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "react": "^18.2.0",
+    "react-redux": "^9.0.4",
+    "redux": "^5.0.0",
+    "redux-saga": "^1.2.3"
+  }
 }
