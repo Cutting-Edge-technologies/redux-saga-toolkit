@@ -2,7 +2,7 @@
   "name": "redux-saga-toolkit",
   "version": "1.0.0",
   "description": "Safe effect wrapper and testing utilites for redux-saga",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "npm run test",
     "storybook": "storybook dev -p 6006",
