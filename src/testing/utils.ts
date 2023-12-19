@@ -1,5 +1,5 @@
 import { configureStore, createAction, createReducer, PayloadAction } from "@reduxjs/toolkit";
-import { Action, Reducer, Store } from "redux";
+import { Action, Middleware, Reducer, Store } from "redux";
 import { commonState } from "../state/commonReducer";
 import { StoreLogSagaMonitor, StoreSagaMonitor } from "./sagaMonitor";
 import makeSagaMiddleware from 'redux-saga';
@@ -59,9 +59,7 @@ export const makeStoreCreator = <State extends commonState>(reducer: Reducer<Sta
     
     const store = configureStore({
       reducer,
-      middleware: [
-        sagaMiddleware,
-      ],
+      middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware as Middleware),
       devTools: process.env.NODE_ENV !== 'production',
     });
   
@@ -102,9 +100,8 @@ export const makeHocTestingStore = <State extends commonState>(store: ExtendedSt
 
   const hocStore = configureStore({
     reducer: rootReducer,
-    middleware: [
-      sagaMiddleware,
-    ],
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware as Middleware),
+
     devTools: process.env.NODE_ENV !== 'production',
   });
 
