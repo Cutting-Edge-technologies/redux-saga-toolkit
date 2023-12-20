@@ -1,6 +1,6 @@
 {
   "name": "cet-redux-saga-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Safe effect wrapper and testing utilites for redux-saga",
   "main": "./dist/index.js",
   "scripts": {
