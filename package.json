@@ -2,9 +2,12 @@
   "name": "redux-saga-toolkit",
   "version": "1.0.0",
   "description": "Safe effect wrapper and testing utilites for redux-saga",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "npm run test"
+    "build": "tsc",
+    "test": "npm run test",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,26 @@
   "bugs": {
     "url": "https://github.com/Cutting-Edge-technologies/redux-saga-toolkit/issues"
   },
-  "homepage": "https://github.com/Cutting-Edge-technologies/redux-saga-toolkit#readme"
+  "homepage": "https://github.com/Cutting-Edge-technologies/redux-saga-toolkit#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "react": "^18.2.0",
+    "react-redux": "^9.0.4",
+    "redux": "^5.0.0",
+    "redux-saga": "^1.2.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-webpack5": "^7.6.6",
+    "@storybook/test": "^7.6.6",
+    "@types/node": "^20.10.5",
+    "prop-types": "^15.8.1",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.6"
+  }
 }
