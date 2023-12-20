@@ -4,7 +4,7 @@ import { ExtendedStore } from "../types";
 import * as React from 'react'
 
 export const makeDecorator = (store: ExtendedStore<any>) => {
-  const HocDecorator = (Story: StoryFn<any>) => {
+  const HocDecorator = (Story: StoryFn<any>): React.ReactNode => {
     return (
       <Provider store={store}>
         <Story />
