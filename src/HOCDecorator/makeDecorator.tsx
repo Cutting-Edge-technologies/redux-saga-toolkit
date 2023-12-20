@@ -1,10 +1,10 @@
-import { StoryFn } from "@storybook/react";
+import { StoryFn, Decorator, StoryObj } from "@storybook/react";
 import { Provider } from "react-redux";
 import { ExtendedStore } from "../types";
 import * as React from 'react'
 
 export const makeDecorator = (store: ExtendedStore<any>) => {
-  const HocDecorator = (Story: StoryFn<any>): React.ReactNode => {
+  const HocDecorator = (Story: StoryFn<any>) => {
     return (
       <Provider store={store}>
         <Story />
