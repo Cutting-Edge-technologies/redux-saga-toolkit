@@ -8,7 +8,8 @@
     "test": "npm run test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "doc": "typedoc"
+    "doc": "typedoc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
