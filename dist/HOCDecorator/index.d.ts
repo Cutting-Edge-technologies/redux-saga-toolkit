@@ -7,6 +7,6 @@ export declare const createHOCDecorator: <State extends {
     error: import("../state/errorSlice").errorState;
 }>(storeCreator: StoreCreator<State>) => {
     store: import("..").ExtendedStore<State>;
-    HocDecorator: (Story: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react/dist/types-0fc72a6d").R, any>) => import("react").JSX.Element;
+    HocDecorator: (Story: import("@storybook/types").AnnotatedStoryFn<import("@storybook/react/dist/types-0fc72a6d").R, any>) => import("react").ReactNode;
     useSetTestState: (stateDiff: Partial<State>) => void;
 };
