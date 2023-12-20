@@ -4,6 +4,7 @@
   "description": "Safe effect wrapper and testing utilites for redux-saga",
   "main": "./dist/index.js",
   "scripts": {
+    "build": "tsc",
     "test": "npm run test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
