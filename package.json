@@ -1,6 +1,6 @@
 {
-  "name": "redux-saga-toolkit",
-  "version": "1.0.0",
+  "name": "cet-redux-saga-toolkit",
+  "version": "1.0.2",
   "description": "Safe effect wrapper and testing utilites for redux-saga",
   "main": "./dist/index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test": "npm run test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "doc": "typedoc"
+    "doc": "typedoc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,8 @@
     "@storybook/react": "^7.6.6",
     "@storybook/react-webpack5": "^7.6.6",
     "@storybook/test": "^7.6.6",
+    "@testing-library/react": "^14.1.2",
+    "@types/jest": "^29.5.11",
     "@types/node": "^20.10.5",
     "prop-types": "^15.8.1",
     "react-dom": "^18.2.0",

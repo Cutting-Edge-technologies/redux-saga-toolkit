@@ -1,4 +1,4 @@
-import { StoryFn } from "@storybook/react";
+import { StoryFn, Decorator, StoryObj } from "@storybook/react";
 import { Provider } from "react-redux";
 import { ExtendedStore } from "../types";
 import * as React from 'react'

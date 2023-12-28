@@ -1,0 +1,1 @@
+{"version":3,"file":"commonReducer.js","sourceRoot":"","sources":["../../src/state/commonReducer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,MAAM,OAAO,CAAC;AACxC,OAAO,EAAE,UAAU,EAAE,MAAM,cAAc,CAAC;AAC1C,OAAO,EAAE,YAAY,EAAE,MAAM,gBAAgB,CAAC;AAE9C,MAAM,CAAC,MAAM,aAAa,GAAG,eAAe,CAAC;IAC3C,OAAO,EAAE,YAAY,CAAC,OAAO;IAC7B,KAAK,EAAE,UAAU,CAAC,OAAO;CAC1B,CAAC,CAAC"}
