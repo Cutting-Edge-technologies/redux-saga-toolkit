@@ -1,0 +1,11 @@
+{
+  "name": "@cet/redux-saga-toolkit",
+  "version": "1.0.0",
+  "exports": "./src/index.ts",
+  "allowImportingTsExtensions": false,
+  "lint": {
+    "rules": {
+      "exclude": ["no-explicit-any"]
+    }
+  }
+}
